@@ -33,3 +33,63 @@ payload-analyzer/
 ├── rules.py             # attack pattern rules (OWASP-based)
 ├── utils.py             # reporting & JSON export
 └── requests.txt         # sample HTTP request input
+```
+
+##⚙️ How to Run
+```text
+python main.py -f requests.txt -o report.json
+```
+##📊 Output Example
+```text
+=== PAYLOAD ANALYSIS REPORT ===
+Severity: HIGH
+
+⚠️ Body: SQL Injection
+⚠️ Path: Suspicious URL pattern detected
+📦 JSON Report Example
+{
+  "timestamp": "2026-05-20T12:00:00",
+  "severity": "HIGH",
+  "findings": [
+    "Body: SQL Injection"
+  ]
+}
+```
+##🧠 What this project demonstrates
+
+This project is a real offensive security mini-tool built for learning purposes and demonstrates:
+
+-CLI tooling (real-world usability)
+-HTTP parsing (proxy-like behavior)
+-URL decoding (attack obfuscation handling)
+-OWASP rule detection
+-severity scoring engine
+-structured logging (JSON reports)
+
+This is part of learning the basics of security blue teaming and understanding how security tools analyze incoming traffic for malicious patterns.
+
+##🌱 Status
+
+🚧 Work in Progress
+
+This project is actively being improved as part of cybersecurity learning and experimentation.
+
+##🔮 Future Improvements (Planned)
+
+The next stage of this project is to evolve it into a Flask-based web security dashboard, including:
+
+###🌐 Flask Web Dashboard
+-Upload raw HTTP requests via web UI
+-Real-time payload analysis
+-Interactive vulnerability results display
+###📊 Visualization
+-Severity graphs (Low / Medium / High trends)
+-Attack type breakdown charts
+-🧠 Advanced Detection
+-Smarter rule engine (context-aware detection)
+-Payload normalization & decoding layers
+-Basic anomaly scoring system
+###🔌 Extended Capabilities
+-API endpoint testing module
+-Batch request scanning
+-Exportable security reports dashboard
